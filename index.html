@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boekenapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Boekenapp</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#mijn-boeken">Mijn boeken</a></li>
+        <li><a href="#favorieten">Favorieten</a></li>
+        <li><a href="#zoeken">Zoeken</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- voorkeuren -->
+    <section class="voorkeuren">
+        <h2>Kies je startpunt</h2>
+
+        <label>
+            <input type="radio" name="startpunt" value="mijn-boeken">
+            Mijn boeken
+        </label>
+
+        <label>
+            <input type="radio" name="startpunt" value="favorieten">
+            Favorieten
+        </label>
+
+        <label>
+            <input type="radio" name="startpunt" value="zoeken">
+            Zoeken
+        </label>
+
+        <button type="button" id="opslaan">Ga naar mijn startpunt</button>
+    </section>
+
+    <!-- sections -->
+    <section id="mijn-boeken" tabindex="-1">
+        <h2>Mijn boeken</h2>
+        <ul>
+            <li>The Hobbit</li>
+            <li>Pride and Prejudice</li>
+            <li>Atomic Habits</li>
+        </ul>
+    </section>
+
+    <section id="favorieten" tabindex="-1">
+        <h2>Favorieten</h2>
+        <ul>
+            <li>Harry Potter</li>
+            <li>The Alchemist</li>
+        </ul>
+    </section>
+
+    <section id="zoeken" tabindex="-1">
+        <h2>Zoeken</h2>
+        <label for="search">Zoek een boek</label>
+        <input type="text" id="search">
+        <button>Zoeken</button>
+    </section>
+
+</main>
+
+<script src="js.js"></script>
+</body>
+</html>

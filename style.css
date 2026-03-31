@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f6f6;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* layout */
+header,
+nav,
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* nav */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003082;
+  font-weight: bold;
+}
+
+/* sections */
+section {
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* voorkeuren */
+.voorkeuren label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* buttons */
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #003082;
+  background: white;
+  color: #003082;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/* input */
+input {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* focus */
+a:focus,
+button:focus,
+input:focus,
+section:focus {
+  outline: 3px solid #ffc917;
+  outline-offset: 3px;
+}
