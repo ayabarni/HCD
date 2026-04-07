@@ -1,76 +1,52 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boekenapp</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <main>
+        <h1>Kunst van de dag</h1>
+        <p class="intro">
+            Ontdek één kunstwerk via geluid. Kies niet wat je wilt zien, maar hoe je het wilt beleven.
+        </p>
 
-<header>
-    <h1>Boekenapp</h1>
-</header>
+        <section class="card">
+            <p class="dag">Vandaag</p>
+            <h2>De sterrennacht</h2>
 
-<nav>
-    <ul>
-        <li><a href="#mijn-boeken">Mijn boeken</a></li>
-        <li><a href="#favorieten">Favorieten</a></li>
-        <li><a href="#zoeken">Zoeken</a></li>
-    </ul>
-</nav>
+            <p id="tekstOutput"></p>
 
-<main>
+            <div class="modes">
+                <button class="mode-knop active" data-mode="kort">Kort</button>
+                <button class="mode-knop" data-mode="verdieping">Verdieping</button>
+                <button class="mode-knop" data-mode="sfeer">Sfeer</button>
+            </div>
 
-    <!-- voorkeuren -->
-    <section class="voorkeuren">
-        <h2>Kies je startpunt</h2>
+            <div class="controls">
+                <button id="playButton">Afspelen</button>
+                <button id="stopButton">Stoppen</button>
+            </div>
 
-        <label>
-            <input type="radio" name="startpunt" value="mijn-boeken">
-            Mijn boeken
-        </label>
+            <div class="snelheid">
+                <label for="snelheidSelect">Leessnelheid</label>
+                <select id="snelheidSelect">
+                    <option value="0.9">0.9x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.2">1.2x</option>
+                    <option value="1.5">1.5x</option>
+                </select>
+            </div>
+        </section>
+    </main>
 
-        <label>
-            <input type="radio" name="startpunt" value="favorieten">
-            Favorieten
-        </label>
 
-        <label>
-            <input type="radio" name="startpunt" value="zoeken">
-            Zoeken
-        </label>
 
-        <button type="button" id="opslaan">Ga naar mijn startpunt</button>
-    </section>
-
-    <!-- sections -->
-    <section id="mijn-boeken" tabindex="-1">
-        <h2>Mijn boeken</h2>
-        <ul>
-            <li>The Hobbit</li>
-            <li>Pride and Prejudice</li>
-            <li>Atomic Habits</li>
-        </ul>
-    </section>
-
-    <section id="favorieten" tabindex="-1">
-        <h2>Favorieten</h2>
-        <ul>
-            <li>Harry Potter</li>
-            <li>The Alchemist</li>
-        </ul>
-    </section>
-
-    <section id="zoeken" tabindex="-1">
-        <h2>Zoeken</h2>
-        <label for="search">Zoek een boek</label>
-        <input type="text" id="search">
-        <button>Zoeken</button>
-    </section>
-
-</main>
-
-<script src="js.js"></script>
+    <script src="js.js"></script>
 </body>
+
 </html>

@@ -3,72 +3,102 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f6f6f6;
-  color: #111;
-  line-height: 1.5;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
 }
 
-/* layout */
-header,
-nav,
 main {
-  max-width: 50rem;
+  width: min(90%, 42rem);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 3rem 0;
 }
 
-/* nav */
-nav ul {
-  list-style: none;
-  padding: 0;
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111111;
+}
+
+.intro {
+  line-height: 1.6;
+  color: #111111;
+  max-width: 38rem;
+}
+
+.card {
+  margin-top: 1.5rem;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.dag {
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+#tekstOutput {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #111111;
+}
+
+.modes,
+.controls {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  color: #003082;
-  font-weight: bold;
+button,
+select {
+  font: inherit;
 }
 
-/* sections */
-section {
-  background: white;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-}
-
-/* voorkeuren */
-.voorkeuren label {
-  display: block;
-  margin: 0.5rem 0;
-}
-
-/* buttons */
 button {
-  margin-top: 1rem;
-  padding: 0.6rem 1rem;
-  border: 2px solid #003082;
-  background: white;
-  color: #003082;
-  border-radius: 0.3rem;
+  padding: 0.8rem 1rem;
+  background: #ffffff;
+  color: #111;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
   cursor: pointer;
 }
 
-/* input */
-input {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
+button:hover,
+button:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: #8d8d8d;
 }
 
-/* focus */
-a:focus,
-button:focus,
-input:focus,
-section:focus {
-  outline: 3px solid #ffc917;
-  outline-offset: 3px;
+.mode-knop.active {
+  border-color: #fff;
+}
+
+.snelheid label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.snelheid select {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 0.75rem;
 }
