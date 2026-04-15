@@ -12,8 +12,8 @@ Ik heb inderdaad iets eenvoudigs gemaakt, namelijk dat de gebruiker een startpun
 
 ## 31 maart  dinsdag
 
-De test verliep naar mijn gevoel niet optimaal. Ik had moeite met het stellen van gerichte vragen en merkte dat ik de gebruiker niet altijd goed kon begeleiden tijdens het testen.
-Daarnaast was het prototype nog niet volledig uitgewerkt. Toen de gebruiker de website opende, wachtte ik eerst af om te zien wat hij zou doen. Hierdoor ontstond er een moment van stilte.
+De test verliep naar mijn gevoel niet optimaal. Ik had moeite met het stellen van gerichte vragen en merkte dat ik de gebruiker niet altijd goed kon begeleiden tijdens het testen.
+Daarnaast was het prototype nog niet volledig uitgewerkt. Toen de gebruiker de website opende, wachtte ik eerst af om te zien wat hij zou doen. Hierdoor ontstond er een moment van stilte.
 Ik gaf vervolgens aan dat het idee was dat de gebruiker zou twijfelen waar hij moest beginnen. De gebruiker gaf echter aan dat dit niet logisch is, omdat er al navigatie aanwezig was bovenaan de pagina. Volgens hem is het verwarrend om nog een extra sectie te hebben om een keuze te maken.
 Dit inzicht liet zien dat mijn concept op dit punt niet goed werkte.
 Verder gaf de gebruiker aan dat het idee rondom boeken interessant is, maar stelde hij een belangrijke vraag: wat voegt deze applicatie toe ten opzichte van bestaande platforms zoals Goodreads?
@@ -51,6 +51,7 @@ Op basis van deze inzichten heb ik de volgende keuzes gemaakt:
 * Beschrijvende linkteksten toegepast
 * Content opgesplitst in kleinere delen
 * Mogelijkheid overwogen om content op te slaan (bookmark, en dat met boeken of artikelen website)
+![alt text](image-3.png)
 
 
 
@@ -152,7 +153,42 @@ Deze week heb ik onderzocht hoe kunstwerken worden gepresenteerd op de websites 
     * verschillende manieren van uitleg aanbieden (kort, verdieping, sfeer)
     en meer focus leggen op de beleving van het kunstwerk
 
+Prototype aanpassingen (voor de test)
 
+Naast het onderzoek heb ik mijn prototype verder aangepast om het beter te kunnen testen met de gebruiker.
+
+Wat heb ik toegevoegd deze week: 
+* Een pauzeknop toegevoegd, zodat Ihab de audio kan stoppen en later verder kan luisteren vanaf hetzelfde punt
+* Een oriëntatie-zin toegevoegd die vóór de audio wordt afgespeeld, zoals:“Je luistert nu naar korte / verdiepende / sfeer uitleg”
+
+
+![week3](image.png)
+
+ ## Test week 3:
+  * Tijdens de test met Ihab kwamen de volgende inzichten naar voren:
+  * Te veel knoppen kunnen verwarrend zijn. De combinatie van pauze en stoppen werd als overbodig ervaren.
+  * De drie vormen van uitleg (kort, verdieping, sfeer) lijken nog te veel op elkaar. Het verschil moet duidelijker worden.
+  * De snelheidsopties liggen te dicht bij elkaar en mogen meer variëren.
+  ![alt text](image-1.png)
+
+Op basis van de feedback uit de test heb ik een aantal belangrijke aanpassingen aan mijn ontwerp doorgevoerd.
+
+Aanpassingen:
+
+* Herschrijven van de teksten
+De uitleg bij de kunstwerken is herschreven en overzichtelijker gestructureerd.
+Het is nu gemakkelijker om onderscheid te maken tussen de drie modi (beschrijving, betekenis en sfeer), die overeenkomen met de verschillende manieren van uitleggen.
+* Uitbreiding van de snelheidsopties
+Er is een extra snelheidsoptie (2x) toegevoegd, zodat de gebruiker meer controle heeft over de afspeelsnelheid.
+Vereenvoudiging van de interface
+* Overbodige knoppen zijn verwijderd.
+De stopknop is verwijderd en vervangen door één duidelijke afspeel-/pauzeknop om de bediening eenvoudiger en minder verwarrend te maken.
+
+
+Vertaald met DeepL.com (gratis versie)
+## Bronen:
+link naar de kunstwerk(ik heb hem voor het uitleg gebruikt):
+<!--  https://www.vangoghstudio.nl/sterrennacht-van-vincent-van-gogh/ -->
 
 
 
