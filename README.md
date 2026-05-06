@@ -170,6 +170,7 @@ Wat heb ik toegevoegd deze week:
   * De drie vormen van uitleg (kort, verdieping, sfeer) lijken nog te veel op elkaar. Het verschil moet duidelijker worden.
   * De snelheidsopties liggen te dicht bij elkaar en mogen meer variëren.
   ![alt text](image-1.png)
+  ![alt text](image-4.png)
 
 Op basis van de feedback uit de test heb ik een aantal belangrijke aanpassingen aan mijn ontwerp doorgevoerd.
 
@@ -189,8 +190,52 @@ Vertaald met DeepL.com (gratis versie)
 ## Bronen:
 link naar de kunstwerk(ik heb hem voor het uitleg gebruikt):
 <!--  https://www.vangoghstudio.nl/sterrennacht-van-vincent-van-gogh/ -->
+link naar muziek:
+<!-- https://pixabay.com/music/world-meditative-ambient-track-with-desert-wind-sounds-370136/ -->
 
+Week 4 – Laatste iteratie op basis van feedback van Ihab
 
+Tijdens deze laatste iteratie heb ik de feedback van Ihab uit de vorige test direct verwerkt in mijn prototype.
+De focus lag hierbij minder op het concept zelf, en meer op het verbeteren van duidelijkheid, gebruiksvriendelijkheid en extra verdieping.
+
+* Wat ik heb aangepast
+
+  * Audiobediening verbeterd
+De play- en pauzefunctie zijn samengevoegd in één duidelijkere knop
+Een restartfunctie toegevoegd, zodat de audio opnieuw vanaf het begin afgespeeld kan worden
+Dit maakt de controle over de audio logischer en intuïtiever
+  * Benaming van de korte modus aangepast
+“Kort” aangepast naar Korte samenvatting
+Dit sluit beter aan bij de verwachting van de gebruiker en maakt duidelijker wat deze modus biedt
+  * Statusmelding verduidelijkt
+   * De statuszin “Je luistert nu naar…” behouden als oriëntatiepunt
+   * De benamingen vereenvoudigd zodat de informatie duidelijker en minder overbodig aanvoelt
+  * Extra verdieping toegevoegd als apart onderdeel
+   * Op basis van Ihabs suggestie heb ik een aparte sectie toegevoegd met extra informatie over:
+    * de kunstenaar
+    *  historische context
+   * Deze informatie staat los van de hoofdmodi, zodat de basiservaring overzichtelijk blijft terwijl extra verdieping optioneel beschikbaar is
+
+### Study situation
+Tijdens dit project heb ik verschillende tests uitgevoerd met Ehab om beter te begrijpen hoe hij websites gebruikt met behulp van een schermlezer.
+Ik heb geobserveerd hoe hij door de website navigeert, welke moeilijkheden hij ondervindt en wat zijn voorkeuren zijn op het gebied van geluid, structuur en interactie.
+
+###  Ignore conventions
+In plaats van een traditionele museumwebsite die voornamelijk op tekst is gebaseerd, koos ik voor een ervaring die meer gericht is op geluid, sfeer en verschillende manieren van uitleg.
+De focus lag minder op het visuele ontwerp en meer op de ervaring en toegankelijkheid.
+
+### Prioritise identity
+Het prototype is ontworpen volgens de persoonlijke voorkeuren van Ehab.
+Tijdens de ontwikkelingsfasen hield ik rekening met zaken als:
+* Geluidsregeling
+* Geluidssnelheid
+* Duidelijke begeleiding
+* Verschillende soorten uitleg
+* Een plezierige luisterervaring
+
+### Add nonsense
+Binnen dit project heb ik geprobeerd om verder te denken dan een standaard informatieve museumwebsite.
+In plaats van alleen feitelijke informatie over kunstwerken te geven, wilde ik ook experimenteren met sfeer, emotie en beleving.
 
 
 

@@ -19,8 +19,8 @@
 const tekstOutput = document.getElementById("tekstOutput");
 const statusOutput = document.getElementById("statusOutput");
 const modeKnoppen = document.querySelectorAll(".mode-knop");
-const playButton = document.getElementById("playButton");
-const pauseButton = document.getElementById("pauseButton");
+const playPauseButton = document.getElementById("playPauseButton");
+const restartButton = document.getElementById("restartButton");
 const snelheidSelect = document.getElementById("snelheidSelect");
 
 let huidigeMode = "kort";
@@ -35,9 +35,9 @@ const kunstwerkTekst = {
 };
 
 const statusTekst = {
-  kort: "Je luistert nu naar: korte uitleg",
-  verdieping: "Je luistert nu naar: verdiepende uitleg",
-  sfeer: "Je luistert nu naar: sfeer uitleg"
+  kort: "Je luistert nu naar: korte samenvatting",
+  verdieping: "Je luistert nu naar: verdiepende",
+  sfeer: "Je luistert nu naar: sfeer"
 };
 
 function updateTekst() {
@@ -51,11 +51,17 @@ function spreekTekstAf() {
   const uitspraak = new SpeechSynthesisUtterance(
     `${statusTekst[huidigeMode]}. ${kunstwerkTekst[huidigeMode]}`
   );
+
   uitspraak.lang = "nl-NL";
   uitspraak.rate = Number(snelheidSelect.value);
 
+  uitspraak.onend = () => {
+    playPauseButton.textContent = "Afspelen";
+  };
+
   speechSynthesis.speak(uitspraak);
 }
+const sfeerAudio = document.getElementById("sfeerAudio");
 
 modeKnoppen.forEach((knop) => {
   knop.addEventListener("click", () => {
@@ -67,21 +73,98 @@ modeKnoppen.forEach((knop) => {
 
     knop.classList.add("active");
     updateTekst();
+
+    speechSynthesis.cancel();
+    playPauseButton.textContent = "Afspelen";
+
+    if (sfeerAudio) {
+      sfeerAudio.pause();
+      sfeerAudio.currentTime = 0;
+    }
   });
 });
 
-playButton.addEventListener("click", spreekTekstAf);
-pauseButton.addEventListener("click", () => {
-  if (speechSynthesis.speaking) {
-    if (speechSynthesis.paused) {
-      speechSynthesis.resume();
-      pauseButton.textContent = "Pauze";
-    } else {
-      speechSynthesis.pause();
-      pauseButton.textContent = "Verder";
+playPauseButton.addEventListener("click", () => {
+  if (speechSynthesis.speaking && !speechSynthesis.paused) {
+    speechSynthesis.pause();
+    playPauseButton.textContent = "Verder";
+
+    if (sfeerAudio) {
+      sfeerAudio.pause();
+    }
+
+  } else if (speechSynthesis.paused) {
+    speechSynthesis.resume();
+    playPauseButton.textContent = "Pauzeren";
+
+    if (huidigeMode === "sfeer" && sfeerAudio) {
+      sfeerAudio.play();
+    }
+
+  } else {
+    spreekTekstAf();
+    playPauseButton.textContent = "Pauzeren";
+
+    if (huidigeMode === "sfeer" && sfeerAudio) {
+      sfeerAudio.volume = 0.08;
+      sfeerAudio.play();
     }
   }
 });
 
+restartButton.addEventListener("click", () => {
+  spreekTekstAf();
+  playPauseButton.textContent = "Pauzeren";
+
+  if (huidigeMode === "sfeer" && sfeerAudio) {
+    sfeerAudio.volume = 0.08;
+    sfeerAudio.currentTime = 0;
+    sfeerAudio.play();
+  }
+});
 
 updateTekst();
+
+// Extra informatie: kunstenaar & context
+const extraInfoButton = document.getElementById("extraInfoButton");
+const extraInfoSection = document.getElementById("extraInfoSection");
+const extraAudioButton = document.getElementById("extraAudioButton");
+const extraTekst = document.getElementById("extraTekst");
+
+extraInfoButton.addEventListener("click", () => {
+  speechSynthesis.cancel();
+
+  extraInfoSection.classList.toggle("hidden");
+
+  if (extraInfoSection.classList.contains("hidden")) {
+    extraInfoButton.textContent = "Meer over de kunstenaar & context";
+    extraAudioButton.textContent = "Afspelen";
+  } else {
+    extraInfoButton.textContent = "Verberg kunstenaar & context";
+  }
+});
+
+extraAudioButton.addEventListener("click", () => {
+  if (speechSynthesis.speaking && !speechSynthesis.paused) {
+    speechSynthesis.pause();
+    extraAudioButton.textContent = "Verder";
+  } else if (speechSynthesis.paused) {
+    speechSynthesis.resume();
+    extraAudioButton.textContent = "Pauzeren";
+  } else {
+    speechSynthesis.cancel();
+
+    const extraUitspraak = new SpeechSynthesisUtterance(extraTekst.textContent);
+
+    extraUitspraak.lang = "nl-NL";
+    extraUitspraak.rate = Number(snelheidSelect.value);
+
+    extraUitspraak.onend = () => {
+      extraAudioButton.textContent = "Afspelen";
+    };
+
+    speechSynthesis.speak(extraUitspraak);
+    extraAudioButton.textContent = "Pauzeren";
+  }
+});
+

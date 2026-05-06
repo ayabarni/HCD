@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boekenapp</title>
+    <title>Kunst van de dag</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
         <h1>Kunst van de dag</h1>
-       
+
 
         <section class="card">
             <p class="dag">Vandaag</p>
             <h2>De sterrennacht</h2>
-            <p id="statusOutput" aria-live="polite">Je luistert nu naar: korte uitleg</p>
+            <p id="statusOutput" aria-live="polite">Je luistert nu naar: korte samenvatting</p>
             <p id="tekstOutput"></p>
 
             <div class="modes">
-                <button class="mode-knop active" data-mode="kort">Kort</button>
+                <button class="mode-knop active" data-mode="kort">Korte samenvatting</button>
                 <button class="mode-knop" data-mode="verdieping">Verdieping</button>
                 <button class="mode-knop" data-mode="sfeer">Sfeer</button>
             </div>
 
             <div class="controls">
-                <button id="playButton">Afspelen</button>
-                <button id="pauseButton">Pauze</button>
+                <button id="playPauseButton">Afspelen</button>
+                <button id="restartButton">Opnieuw afspelen</button>
             </div>
 
             <div class="snelheid">
@@ -35,15 +35,28 @@
                 <select id="snelheidSelect">
                     <option value="0.9">0.9x</option>
                     <option value="1" selected>1x</option>
-                    <option value="1.2">1.2x</option>
                     <option value="1.5">1.5x</option>
                     <option value="2">2x</option>
                 </select>
             </div>
+            <button id="extraInfoButton">Meer over de kunstenaar & context?</button>
+
+        </section>
+
+        <section id="extraInfoSection" class="card hidden">
+            <h2>Kunstenaar & historische context</h2>
+
+            <p id="extraTekst">
+                Vincent van Gogh was een Nederlandse schilder...
+            </p>
+
+            <button id="extraAudioButton">Afspelen</button>
         </section>
     </main>
 
-
+    <audio id="sfeerAudio" loop>
+        <source src="assets/nachtgeluid.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="js.js"></script>
 </body>

@@ -107,3 +107,6 @@ select:focus-visible {
   font-size: 0.95rem;
   color: #333;
 }
+#extraInfoButton {
+  margin-top: 2em;
+}
